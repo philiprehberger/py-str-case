@@ -98,6 +98,14 @@ detect_case("MY_VARIABLE")   # "CONSTANT_CASE"
 | `convert_keys(d, converter)` | Recursively convert dict keys |
 | `detect_case(s)` | Detect case convention of a string |
 
+
+## Development
+
+```bash
+pip install -e .
+python -m pytest tests/ -v
+```
+
 ## License
 
 MIT
