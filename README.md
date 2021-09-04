@@ -35,6 +35,18 @@ to_snake("getHTTPSUrl")  # "get_https_url"
 to_snake("XMLToJSON")    # "xml_to_json"
 ```
 
+### Number-aware splitting
+
+Numbers at letter-digit boundaries are split into separate words:
+
+```python
+from philiprehberger_str_case import to_snake, to_kebab
+
+to_snake("html2json")      # "html_2_json"
+to_snake("item123Name")    # "item_123_name"
+to_kebab("v2Api")          # "v2-api"  (single-letter prefix stays attached)
+```
+
 ### More formats
 
 ```python
@@ -44,6 +56,18 @@ to_constant("htmlParser")  # "HTML_PARSER"
 to_title("html_parser")    # "Html Parser"
 to_dot("htmlParser")       # "html.parser"
 to_path("htmlParser")      # "html/parser"
+```
+
+### Sentence case and Header-Case
+
+```python
+from philiprehberger_str_case import to_sentence, to_header
+
+to_sentence("html_parser")    # "Html parser"
+to_sentence("getHTTPSUrl")    # "Get https url"
+
+to_header("content_type")     # "Content-Type"
+to_header("xForwardedFor")    # "X-Forwarded-For"
 ```
 
 ### Convert dictionary keys
@@ -71,16 +95,29 @@ convert_keys(data, to_snake)
 # }
 ```
 
+Lists of dicts are also supported:
+
+```python
+records = [{"firstName": "Alice"}, {"firstName": "Bob"}]
+convert_keys(records, to_snake)
+# [{"first_name": "Alice"}, {"first_name": "Bob"}]
+```
+
 ### Detect case
 
 ```python
-from philiprehberger_str_case import detect_case
+from philiprehberger_str_case import detect_case, is_case
 
 detect_case("my_variable")   # "snake_case"
 detect_case("myVariable")    # "camelCase"
 detect_case("MyVariable")    # "PascalCase"
 detect_case("my-variable")   # "kebab-case"
 detect_case("MY_VARIABLE")   # "CONSTANT_CASE"
+detect_case("Content-Type")  # "Header-Case"
+detect_case("Hello world")   # "Sentence case"
+
+is_case("my_variable", "snake_case")  # True
+is_case("my_variable", "camelCase")   # False
 ```
 
 ## API
@@ -95,8 +132,11 @@ detect_case("MY_VARIABLE")   # "CONSTANT_CASE"
 | `to_title(s)` | Convert to Title Case |
 | `to_dot(s)` | Convert to dot.case |
 | `to_path(s)` | Convert to path/case |
-| `convert_keys(d, converter)` | Recursively convert dict keys |
+| `to_sentence(s)` | Convert to Sentence case |
+| `to_header(s)` | Convert to HTTP Header-Case |
+| `convert_keys(data, converter)` | Recursively convert dict/list keys |
 | `detect_case(s)` | Detect case convention of a string |
+| `is_case(s, case)` | Check if string matches a case convention |
 
 
 ## Development
