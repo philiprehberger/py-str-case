@@ -6,7 +6,7 @@
 
 Convert strings between camelCase, snake_case, PascalCase, kebab-case, and more.
 
-## Install
+## Installation
 
 ```bash
 pip install philiprehberger-str-case
