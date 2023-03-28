@@ -1,4 +1,5 @@
 # Changelog
+## 0.2.2- Standardize README structure and fix compliance issues
 ## 0.2.1- Add pytest and mypy tool configuration to pyproject.toml
 
 ## 0.2.0 (2026-03-16)
