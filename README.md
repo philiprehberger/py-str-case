@@ -2,8 +2,7 @@
 
 [![Tests](https://github.com/philiprehberger/py-str-case/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/py-str-case/actions/workflows/publish.yml)
 [![PyPI version](https://img.shields.io/pypi/v/philiprehberger-str-case.svg)](https://pypi.org/project/philiprehberger-str-case/)
-[![License](https://img.shields.io/github/license/philiprehberger/py-str-case)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/py-str-case)](https://github.com/philiprehberger/py-str-case/commits/main)
 
 Convert strings between camelCase, snake_case, PascalCase, kebab-case, and more.
 
@@ -139,7 +138,6 @@ is_case("my_variable", "camelCase")   # False
 | `detect_case(s)` | Detect case convention of a string |
 | `is_case(s, case)` | Check if string matches a case convention |
 
-
 ## Development
 
 ```bash
@@ -147,6 +145,24 @@ pip install -e .
 python -m pytest tests/ -v
 ```
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/py-str-case)
+
+🐛 [Report issues](https://github.com/philiprehberger/py-str-case/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/py-str-case/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
+[MIT](LICENSE)
