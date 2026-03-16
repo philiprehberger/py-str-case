@@ -1,5 +1,9 @@
 # philiprehberger-str-case
 
+[![Tests](https://github.com/philiprehberger/py-str-case/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/py-str-case/actions/workflows/publish.yml)
+[![PyPI version](https://img.shields.io/pypi/v/philiprehberger-str-case.svg)](https://pypi.org/project/philiprehberger-str-case/)
+[![License](https://img.shields.io/github/license/philiprehberger/py-str-case)](LICENSE)
+
 Convert strings between camelCase, snake_case, PascalCase, kebab-case, and more.
 
 ## Install
