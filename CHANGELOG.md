@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 (2026-03-16)
+
+- Improve word splitting to handle number-letter boundaries (`"html2json"` -> `["html", "2", "json"]`)
+- Add `to_sentence()` -- Sentence case conversion
+- Add `to_header()` -- HTTP Header-Case conversion
+- Add `is_case()` -- check if string matches a case convention
+- Support lists of dicts in `convert_keys()`
+
 ## 0.1.5
 
 - Add basic import test
