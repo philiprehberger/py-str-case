@@ -24,9 +24,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/philiprehberger/py-str-case"
+Homepage = "https://github.com/philiprehberger/py-str-case#readme"
 Repository = "https://github.com/philiprehberger/py-str-case"
 Issues = "https://github.com/philiprehberger/py-str-case/issues"
+Changelog = "https://github.com/philiprehberger/py-str-case/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/philiprehberger_str_case"]
