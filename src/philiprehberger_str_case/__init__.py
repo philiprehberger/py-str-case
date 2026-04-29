@@ -16,6 +16,7 @@ __all__ = [
     "to_path",
     "to_sentence",
     "to_header",
+    "to_words",
     "convert_keys",
     "detect_case",
     "is_case",
@@ -206,6 +207,23 @@ def to_header(s: str) -> str:
     if not words:
         return s
     return "-".join(w.capitalize() for w in words)
+
+
+def to_words(s: str) -> list[str]:
+    """Split *s* into normalized lowercase words.
+
+    Applies the same splitter used by every ``to_*`` converter — handles
+    common separators (``-``, ``_``, ``.``, ``/``, ``\\``), camelCase /
+    PascalCase / acronym boundaries, and number-letter boundaries.
+
+    >>> to_words("getHTTPSUrl")
+    ['get', 'https', 'url']
+    >>> to_words("html2json")
+    ['html', '2', 'json']
+    >>> to_words("Content-Type")
+    ['content', 'type']
+    """
+    return _split_words(s)
 
 
 def convert_keys(data: dict | list, converter: Callable[[str], str]) -> dict | list:

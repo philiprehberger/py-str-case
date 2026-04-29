@@ -1,12 +1,24 @@
 # Changelog
 
+## 0.3.0 (2026-04-28)
+
+- Add `to_words(s)` — public splitter that returns the list of normalized lowercase words; pairs naturally with the `to_*` converters for custom case transforms
+- Sync `pyproject.toml` description to end with a period (matches README one-liner)
+- Replace import-only test with a comprehensive test suite covering every public function
+
 ## 0.2.3 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section
 - Update CI checkout action to v5 for Node.js 24 compatibility
 - Add GitHub issue templates, dependabot config, and PR template
-## 0.2.2- Standardize README structure and fix compliance issues
-## 0.2.1- Add pytest and mypy tool configuration to pyproject.toml
+
+## 0.2.2
+
+- Standardize README structure and fix compliance issues
+
+## 0.2.1
+
+- Add pytest and mypy tool configuration to pyproject.toml
 
 ## 0.2.0 (2026-03-16)
 

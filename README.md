@@ -70,6 +70,16 @@ to_header("content_type")     # "Content-Type"
 to_header("xForwardedFor")    # "X-Forwarded-For"
 ```
 
+### Split into words
+
+```python
+from philiprehberger_str_case import to_words
+
+to_words("getHTTPSUrl")     # ["get", "https", "url"]
+to_words("html2json")       # ["html", "2", "json"]
+to_words("Content-Type")    # ["content", "type"]
+```
+
 ### Convert dictionary keys
 
 ```python
@@ -134,6 +144,7 @@ is_case("my_variable", "camelCase")   # False
 | `to_path(s)` | Convert to path/case |
 | `to_sentence(s)` | Convert to Sentence case |
 | `to_header(s)` | Convert to HTTP Header-Case |
+| `to_words(s)` | Split a string into a list of normalized lowercase words |
 | `convert_keys(data, converter)` | Recursively convert dict/list keys |
 | `detect_case(s)` | Detect case convention of a string |
 | `is_case(s, case)` | Check if string matches a case convention |

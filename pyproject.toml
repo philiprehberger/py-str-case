@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "philiprehberger-str-case"
-version = "0.2.3"
-description = "Convert strings between camelCase, snake_case, PascalCase, kebab-case, and more"
+version = "0.3.0"
+description = "Convert strings between camelCase, snake_case, PascalCase, kebab-case, and more."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
